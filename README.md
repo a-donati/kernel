@@ -29,7 +29,7 @@ Once signed in, the user has access to submit an entry of what they felt most pr
 ---
 ## Screenshots
 <img src="./client/src/images/kernel-screenshot.png" alt="drawing" height="500" width="500"/>
-<!-- <img src="./client/src/images/grid-screenshot.png" alt="drawing" height="500" width="500"/> -->
+<img src="./client/src/images/grid-screenshot.png" alt="drawing" height="500" width="500"/>
 
 
 

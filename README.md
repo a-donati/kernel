@@ -28,8 +28,11 @@ Once signed in, the user has access to submit an entry of what they felt most pr
 
 ---
 ## Screenshots
-<img src="./client/src/images/kernel-screenshot.png" alt="drawing" height="500" width="500"/>
-<img src="./client/src/images/grid-screenshot.png" alt="drawing" height="500" width="500"/>
+<img src="./client/src/images/kernel-screenshot.png" alt="Kernel homepage that displays login and signup form" height="500" width="500"/>
+<img src="./client/src/images/day-entry.png" alt="Entry form where user enter information about their day and habits" height="500" width="500"/>
+<img src="./client/src/images/grid-screenshot.png" alt="Card format that displays the user input from the entered date" height="500" width="500"/>
+<img src="./client/src/images/resources.png" alt="3 cards on top with mental wellbeing website resources with 3 cards below with links to popular Youtube meditation videos" height="500" width="500"/>
+
 
 
 

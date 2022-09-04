@@ -112,12 +112,12 @@ const Activities = (props) => {
         </ul>
       </div>
       <br/>
-      <div>
+      {/* <div>
         <input className=" d-flex col-5" type="text" placeholder="Add new" value={name} onChange={handleChange} />
       </div>
       <div className="d-flex col-5 m-2 justify-content-center">
         <button className="btn-dark col-5 addbtn"type="button" onClick={handleAdd}>Add</button>
-      </div>
+      </div> */}
             </div>
     </div>
   );

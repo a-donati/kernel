@@ -85,6 +85,10 @@ function GridPage() {
   const myStyle = {
     backgroundcolor: "2px solid rgb(41, 11, 124)",
   };
+
+  const hasPosts = userData.savedKernels.length
+  console.log(hasPosts);
+
   return (
     <div className="grid">
       <div className="mx-auto mt-4 mb-4">
@@ -93,7 +97,11 @@ function GridPage() {
       <div className="mx-auto mt-4">
         <h5>Click on the grid squares to see your daily results.</h5>{" "}
       </div>
-
+  {/* if(hasPosts > 0) {
+    console.log('got em')
+  }else {
+ console.log('ya don')
+  } */}
       <div className="d-flex">
         {/* {userData.savedKernels.length ? */}
         {userData.savedKernels.map((info) => {

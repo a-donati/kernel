@@ -6,12 +6,14 @@ import Auth from '../utils/auth';
 function NavBar() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/">
             kernel
           </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           {Auth.loggedIn() ? (
+                    <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
 
             <Nav.Link as={Link} to="/dailytracker">
@@ -30,7 +32,10 @@ function NavBar() {
               Logout
             </Nav.Link>
           </Nav>
+          </Navbar.Collapse>
+
           ): <Nav.Link></Nav.Link> 
+
           }
         </Container>
       </Navbar>

@@ -72,16 +72,29 @@ const FormSubmission = () => {
 
   return (
     <>
+    <div className="d-flex flex-column ">
+      {/* select todays factors purple icons */}
+        <div className="text-center container row dt activities">
+
+          <h5>Select today's factors:</h5>
+          <div className="activities d-flex align-items-center" >
+            <Activities
+              checkedHabits={checkedHabits}
+              setCheckedHabits={setCheckedHabits}
+            />
+          </div>
+        </div>
+
       <div className="row">
-        <div className="row dt dailytrackerform col-8">
-          <div className="column-left dailytrackerform">
+        <div className="row dt dailytrackerform col-8 d-flex align-items-center">
+          <div className=" dailytrackerform">
             <Form
               noValidate
               validated={validated}
               onSubmit={handleFormSubmit}
               className="form-width col-12"
             >
-              <div className="d-inline p-2">
+              <div className="d-inline p-2 container">
                 <div className="form-group">
                   <br />
                   <br />
@@ -144,18 +157,7 @@ const FormSubmission = () => {
             </Form>
           </div>
         </div>
-        <div className="row dt activities ms-auto mt-4 col-4">
-        <br />
-        <br />
-        <br />
-          <h5>Select today's factors:</h5>
-          <div className="column-right activities">
-            <Activities
-              checkedHabits={checkedHabits}
-              setCheckedHabits={setCheckedHabits}
-            />
-          </div>
-        </div>
+      </div>
       </div>
     </>
   );

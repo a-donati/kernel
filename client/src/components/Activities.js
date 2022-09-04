@@ -102,16 +102,12 @@ const Activities = (props) => {
 
   return (
     <div>
-      <div >
-      <div>
         <ul>
             {/* render new list items */}
           {namesList.map((item) => (
             <li key={item.id} className="item listItems" onClick={handleClick}>{item.name}</li>
             ))}
         </ul>
-      </div>
-      <br/>
       {/* <div>
         <input className=" d-flex col-5" type="text" placeholder="Add new" value={name} onChange={handleChange} />
       </div>
@@ -119,7 +115,6 @@ const Activities = (props) => {
         <button className="btn-dark col-5 addbtn"type="button" onClick={handleAdd}>Add</button>
       </div> */}
             </div>
-    </div>
   );
 };
 

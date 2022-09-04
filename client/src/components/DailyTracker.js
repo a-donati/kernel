@@ -72,9 +72,9 @@ const FormSubmission = () => {
 
   return (
     <>
-    <div className="d-flex flex-column ">
+    <div className="d-flex flex-column text-center align-items-center ">
       {/* select todays factors purple icons */}
-        <div className="text-center container row dt activities">
+        <div className="text-center container row dt activities d-flex">
 
           <h5>Select today's factors:</h5>
           <div className="activities d-flex align-items-center" >
@@ -85,9 +85,9 @@ const FormSubmission = () => {
           </div>
         </div>
 
-      <div className="row">
+      {/* <div className="row"> */}
         <div className="row dt dailytrackerform col-8 d-flex align-items-center">
-          <div className=" dailytrackerform">
+          <div className=" dailytrackerform d-flex">
             <Form
               noValidate
               validated={validated}
@@ -158,7 +158,7 @@ const FormSubmission = () => {
           </div>
         </div>
       </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };

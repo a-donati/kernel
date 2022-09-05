@@ -11,7 +11,7 @@ import Button from 'react-bootstrap/Button';
 function DailyTracker() {
 
   return (
-    <div className="grid">
+    <div className="grid container">
       <div className="row">
         <div className="column-left">
           <Header />

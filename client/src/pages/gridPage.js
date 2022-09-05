@@ -153,9 +153,7 @@ function GridPage() {
                     </div>
 
                     <div
-                      id="collapseOne"
-                      className="collapse show"
-                      aria-labelledby="headingOne"
+                     
                     >
                       <div class="card-body">
                         <ul
@@ -187,8 +185,39 @@ function GridPage() {
           );
         })}
       </div>
+      <table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Daily Rating</th>
+      <th scope="col">Proud Of:</th>
+      <th scope="col">Excited for:</th>
+      <th scope="col">Intent:</th>
+      <th scope="col">Habits:</th>
 
-      <Calendar />
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+      {/* <Calendar /> */}
     </div>
   );
 }

@@ -4,6 +4,8 @@ import css from "./gridPage.css";
 import { useQuery } from "@apollo/client";
 import { GET_ME } from "../utils/queries";
 import React, { useState } from "react";
+import Grid from '../components/Grid';
+import Login from '../components/LoginForm';
 
 
 function GridPage() {
@@ -82,142 +84,26 @@ function GridPage() {
 
   console.log(uuidv4());
 
-  const myStyle = {
-    backgroundcolor: "2px solid rgb(41, 11, 124)",
-  };
+
 
   const hasPosts = userData.savedKernels.length
   console.log(hasPosts);
 
+  
+
+  function checkPosts() {
+    if (hasPosts > 0) {
+      return <Grid/>;
+} else {
+      return <Login />;
+    }
+
+  }
+
   return (
     <div className="grid">
-      <div className="mx-auto mt-4 mb-4">
-        <h3>Welcome to your Grid</h3>{" "}
-      </div>
-      <div className="mx-auto mt-4">
-        <h5>Click on the grid squares to see your daily results.</h5>{" "}
-      </div>
-  {/* if(hasPosts > 0) {
-    console.log('got em')
-  }else {
- console.log('ya don')
-  } */}
-      <div className="d-flex">
-        {/* {userData.savedKernels.length ? */}
-        {userData.savedKernels.map((info) => {
-          const newId = uuidv4();
-          const newDate = new Date(info.submissionDate * 1);
-          return (
-            // <button key={info.submissionDate}>{info.submissionDate}</button>
-            <>
-              {/* <div className="card" style={{ width: '18rem' }}>
-                <div className="card-header">
-                </div>
-                {/* {timeConverter(info.submissionDate)} */}
-              {/* {console.log(new Date(info.submissionDate * 1))
-} */}
-              {/* <button onClick={handleButtonClick} id={info.submissionDate}>{timeConverter(info.submissionDate)}</button>
-                <ul className="list-group list-group-flush" id={info.submissionDate}>
-                  <li className="list-group-item">Daily rating: {info.dayRating}</li>
-                  <li className="list-group-item">Proud: {info.proud}</li>
-                  <li className="list-group-item">Excite: {info.excite}</li>
-                  <li className="list-group-item">Daily intention: {info.intention}</li>
-                  <li className="list-group-item">Habits: {info.habits.join(', ')}</li>
-
-
-
-                </ul>
-              </div> */}
-              <div className="d-flex mx-auto mt-4">
-                <div
-                  className="justify-content-center"
-                  id="accordionExample"
-                >
-                  <div className="card m-2">
-                    <div
-                      className="card-header background-blue"
-                      id="headingOne"
-                    >
-                      <h2 className="mb-0">
-                        <button
-                          className="btn text-decoration-none text-light"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseOne"
-                          aria-expanded="true"
-                          aria-controls="collapseOne"
-                        >
-                          {timeConverter(info.submissionDate)}
-                        </button>
-                      </h2>
-                    </div>
-
-                    <div
-                     
-                    >
-                      <div class="card-body">
-                        <ul
-                          className="list-group list-group-flush"
-                          id={info.submissionDate}
-                        >
-                          <li className="list-group-item">
-                            Daily rating: {info.dayRating}
-                          </li>
-                          <li className="list-group-item">
-                            Proud of: {info.proud}
-                          </li>
-                          <li className="list-group-item">
-                            Excited for: {info.excite}
-                          </li>
-                          <li className="list-group-item">
-                            Intent for tomorrow: {info.intention}
-                          </li>
-                          <li className="list-group-item">
-                            Habits: {info.habits.join(", ")}
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </>
-          );
-        })}
-      </div>
-      <table class="table table-sm">
-  <thead>
-    <tr>
-      <th scope="col">Date</th>
-      <th scope="col">Daily Rating</th>
-      <th scope="col">Proud Of:</th>
-      <th scope="col">Excited for:</th>
-      <th scope="col">Intent:</th>
-      <th scope="col">Habits:</th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-      {/* <Calendar /> */}
+    {checkPosts()}
+      
     </div>
   );
 }
